@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.G
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -124,7 +124,6 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 	        source /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ithil/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -140,16 +139,20 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# >>> welcome message <<<
 echo "😊 -- Welcome back -- 😊"
-
-# <<< welcome messa
+# <<< welcome message <<<
 
 # confirm before removing files
 alias rm="rm -I"
+
+alias vim="nvim"
+
+alias tmux="TERM=xterm-256color tmux"
 
 # confirm before overwriting files. Now '$echo "something" > tmp.txt' won't overwrite unless specified with >| (e.g $echo "something" >| tmp.txt) 
 set -o noclobber
 
 cd
 
-
+export XDG_CONFIG_HOME="/home/ithil/.config/"
